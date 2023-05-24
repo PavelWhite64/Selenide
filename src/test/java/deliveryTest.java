@@ -1,5 +1,4 @@
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
@@ -34,8 +33,8 @@ public class deliveryTest {
 //        Configuration.holdBrowserOpen = true;
         open("http://localhost:7777");
         $("[data-test-id=city] input").setValue("Ка");
-        $("[data-test-id=city] input").shouldBe(Condition.visible, Duration.ofMillis(1000)).sendKeys(Keys.DOWN,Keys.DOWN,Keys.DOWN,Keys.DOWN,Keys.DOWN,Keys.ENTER);
-        $("[data-test-id=date] input").shouldBe(Condition.visible, Duration.ofMillis(1000)).sendKeys(Keys.DOWN,Keys.DOWN,Keys.LEFT,Keys.LEFT,Keys.LEFT,Keys.ENTER);
+        $("[data-test-id=city] input").shouldBe(Condition.visible, Duration.ofMillis(1000)).sendKeys(Keys.DOWN, Keys.DOWN, Keys.DOWN, Keys.DOWN, Keys.DOWN, Keys.ENTER);
+        $("[data-test-id=date] input").shouldBe(Condition.visible, Duration.ofMillis(1000)).sendKeys(Keys.DOWN, Keys.DOWN, Keys.LEFT, Keys.LEFT, Keys.LEFT, Keys.ENTER);
         $("[data-test-id=name] input").setValue("Павел Цыганков");
         $("[data-test-id=phone] input").setValue("+79876542345");
         $("[data-test-id=agreement]").click();
