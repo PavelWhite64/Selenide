@@ -19,7 +19,7 @@ public class deliveryTest {
     @Test
     void happyPathTest() {
 //        Configuration.holdBrowserOpen = true;
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Казань");
         $("[data-test-id=date] input").setValue(generateDate(5, "dd.MM.yyyy"));
         $("[data-test-id=name] input").setValue("Павел Цыганков");
@@ -32,7 +32,7 @@ public class deliveryTest {
     @Test
     void happyPathTest2() {
 //        Configuration.holdBrowserOpen = true;
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Ка");
         $("[data-test-id=city] input").shouldBe(Condition.visible, Duration.ofMillis(1000)).sendKeys(Keys.DOWN,Keys.DOWN,Keys.DOWN,Keys.DOWN,Keys.DOWN,Keys.ENTER);
         $("[data-test-id=date] input").shouldBe(Condition.visible, Duration.ofMillis(1000)).sendKeys(Keys.DOWN,Keys.DOWN,Keys.LEFT,Keys.LEFT,Keys.LEFT,Keys.ENTER);
