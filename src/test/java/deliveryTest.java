@@ -19,7 +19,7 @@ public class deliveryTest {
     void happyPathTest() {
 //        Configuration.holdBrowserOpen = true;
         String date = generateDate(5, "dd.MM.yyyy");
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Саратов");
         $(byText("Саратов")).shouldBe(Condition.visible).click();
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
@@ -36,7 +36,7 @@ public class deliveryTest {
     void happyPathTest2() {
 //        Configuration.holdBrowserOpen = true;
         String date = generateDate(7, "dd.MM.yyyy");
-        open("http://localhost:7777");
+        open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Са");
         $(byText("Саратов")).shouldBe(Condition.visible).click();
         $("[data-test-id=date] input").shouldBe(Condition.visible, Duration.ofMillis(1000)).sendKeys(Keys.DOWN, Keys.DOWN, Keys.LEFT, Keys.LEFT, Keys.LEFT, Keys.ENTER);
